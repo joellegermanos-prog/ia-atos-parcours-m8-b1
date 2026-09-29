@@ -15,38 +15,35 @@
 |---|---|---|---|
 | 1 | 1 | Besoin | Quand vous dites qu'un bain « tombe en panne », quel événement concret se produit ? |
 | 2 | 1 | Processus actuel | Comment détectez-vous aujourd'hui qu'un bain commence à dériver ? |
-| 3 | 1 | Besoin réel | Qu'est-ce qui vous fait perdre le plus de temps ou d'argent aujourd'hui avec ces bains ? |
-| 4 | 1 | Succès | Qu'est-ce qui vous ferait dire que ce projet est une réussite dans un an ? |
-| 5 | 1 | Coût d'une erreur | Quelle erreur serait la plus pénalisante : manquer une panne ou générer une fausse alerte ? |
-| 6 | 1 | Données | Depuis quand les mesures de température, pH et niveau sont-elles enregistrées ? |
-| 7 | 1 | Données | Combien de pannes sont enregistrées dans votre historique et comment sont-elles identifiées aujourd'hui ? |
-| 8 | 1 | Données | Pouvez-vous nous transmettre un extrait représentatif des données et incidents ? |
-| 9 | 2 | Utilisateurs | Qui utilise aujourd'hui les informations de supervision et qui décide d'arrêter un bain ? |
-| 10 | 2 | Données personnelles | Les données utilisées sont-elles associées à des opérateurs ou techniciens identifiables ? |
-| 11 | 2 | SI / hébergement | Quelles contraintes d'hébergement ou de cybersécurité devons-nous respecter ? |
-| 12 | 3 | Déploiement | Préféreriez-vous commencer par un pilote sur un bain ou viser directement les quatre bains ? |
-| R1 | réserve | Processus métier | Lorsqu'une dérive est détectée suffisamment tôt, quelles actions pouvez-vous mettre en œuvre pour éviter l'arrêt ? |
-| R2 | réserve | Périmètre | Combien de bains sont concernés au total ? |
-| R3 | réserve | Budget / délai | Quel budget et quelle échéance avez-vous en tête pour ce projet ? |
+| 3 | 1 | Risques métier | Qu'est-ce qui vous ferait considérer l'outil comme suffisamment fiable pour envisager une coupure automatique ? |
+| 4 | 1 | Données | Depuis quand enregistrez-vous les mesures de température, de pH et de niveau ? |
+| 5 | 1 | Données | Combien de pannes sont enregistrées dans votre historique et comment sont-elles identifiées aujourd'hui ? |
+| 6 | 1 | Données | Pouvez-vous nous transmettre un extrait représentatif des mesures capteurs et du journal de maintenance associé à quelques pannes ? |
+| 7 | 1 | Succès | Qu'est-ce qui vous ferait dire que le projet est réussi dans un an ? |
+| 8 | 2 | Données personnelles | Les données sont-elles associées à des opérateurs ou à des techniciens identifiables ? |
+| 9 | 2 | SI / hébergement | Quelles contraintes d'hébergement, d'accès au réseau industriel ou de cybersécurité devons-nous impérativement respecter ? |
+| 10 | 2 | Existant | Quelle action réalisez-vous concrètement lorsqu'une dérive est détectée ?? |
+| 11 | 3 | Processus métier | Lorsqu'une dérive est détectée suffisamment tôt, quelles actions pouvez-vous mettre en œuvre pour éviter l'arrêt du bain ?? |
+| 12 | 3 | Déploiement | Préféreriez-vous commencer par un pilote sur un seul bain ou déployer directement la solution sur les quatre bains ? |
+| R1 | réserve | Budget | Quel budget avez-vous prévu pour ce projet ? |
+| R2 | réserve | Délai | Quelle échéance souhaitez-vous pour une première mise en production ? |
 
 ## 2. Pendant le rendez-vous — dit / interprété
 
 | Question posée (telle quelle) | Ce que le client a **dit** (citation) | Ce que j'en **interprète** |
 |---|---|---|
-| Quand vous dites qu'un bain « tombe en panne », quel événement concret se produit ? | « Nos bains tombent en panne deux à trois fois par mois : résistance qui lâche, dérive de température, problème de niveau. Chaque arrêt non prévu nous coûte environ 30 000 euros. » | Trois familles de défaillance sont identifiées. Le coût métier est élevé. L'objectif est de réduire les arrêts non planifiés. |
-| Qui utilise aujourd'hui les informations de supervision et qui décide d'arrêter un bain ? | « Le chef d'équipe de quart et moi. C'est moi qui décide d'arrêter ou pas. » | La décision est aujourd'hui entièrement humaine. |
-| Relance : pourquoi évoquer l'automatisation ? | « La direction m'a demandé : si l'outil est fiable, est-ce qu'il ne pourrait pas couper le bain tout seul la nuit ? » | Une automatisation future est envisagée mais ne fait pas partie du fonctionnement actuel. C'est un point de vigilance AI Act et sécurité industrielle. |
-| Quelle erreur serait la plus pénalisante ? | « Une panne ratée, c'est ce qu'on vit aujourd'hui. Mais si on dit aux gars que l'outil surveille, ils vont arrêter de surveiller eux-mêmes. » | Le principal risque métier est la surconfiance dans l'outil et la perte de vigilance humaine. |
-| Depuis quand les mesures sont-elles enregistrées ? | « Chaque bain a des capteurs : température, pH et niveau. Ils remontent dans notre supervision toutes les heures. On garde tout depuis deux ans. » | Les données existent, sont historisées et potentiellement exploitables pour une étude prédictive. |
-| Combien de pannes sont enregistrées dans votre historique et comment sont-elles identifiées ? | « La maintenance tient un journal : date, heure, bain concerné, cause supposée. Sur deux ans, ça fait une cinquantaine de pannes. » | Existence d'une cible exploitable. Les labels sont présents mais leur qualité doit être vérifiée. |
-| Pouvez-vous transmettre un extrait des données ? | « Je vous envoie 48 heures de relevés d'un bain exportés de la supervision. » | Un extrait réel a été obtenu pour évaluer la qualité des données. |
-| Qu'est-ce qui vous ferait dire que le projet est une réussite dans un an ? | « Si on détecte au moins 70 % des pannes 48 heures avant, c'est déjà énorme. Aujourd'hui, on en détecte zéro. » | KPI métier explicite et mesurable. |
-| Les données sont-elles associées à des techniciens identifiables ? | « Les températures et niveaux non. Le journal de maintenance contient le nom du technicien de quart. » | Présence limitée de données personnelles. Une minimisation ou pseudonymisation sera nécessaire. |
-| Quelles contraintes d'hébergement ou de cybersécurité devons-nous respecter ? | « L'atelier n'est pas connecté à internet, et l'automaticien ne veut pas qu'il le soit. Les bureaux, oui. » | Forte séparation OT/IT. Une architecture locale ou hybride sera privilégiée. |
-| Existe-t-il déjà des seuils ou règles d'alarme ? | « Si la température passe 470, ça sonne. Mais quand ça sonne, c'est déjà trop tard. » | Les alarmes existent déjà. Le besoin est l'anticipation, pas la supervision ou la visualisation. |
-| Préféreriez-vous commencer par un pilote ou un déploiement global ? | « On a un arrêt technique annuel en février. Si on peut tester quelque chose avant, sur un bain, ce serait bien. » | Le client est favorable à une expérimentation sur un bain avant généralisation. |
-| Relance complémentaire | « Un stagiaire a fait des graphiques Excel une fois, c'était joli mais ça n'a servi à rien. » | Le client ne cherche pas un tableau de bord mais une aide décisionnelle opérationnelle. |
-| Relance complémentaire | « Quatre bains, qui tournent en 3×8. » | Le périmètre du projet couvre quatre équipements critiques exploités en continu. |
+| Quand vous dites qu'un bain « tombe en panne », quel événement concret se produit ? | « Nos bains tombent en panne deux à trois fois par mois : résistance qui lâche, dérive de température, problème de niveau. Chaque arrêt non prévu nous coûte environ 30 000 euros : production perdue, zinc à refondre, clients livrés en retard. On voudrait être prévenus 48 heures avant. » | Trois types de défaillances sont identifiés. Chaque arrêt a un impact financier important. Le besoin exprimé est d'obtenir une anticipation de 48 h. |
+| Comment détectez-vous aujourd'hui qu'un bain commence à dériver ? | « Le chef d'équipe de quart et moi. C'est moi qui décide d'arrêter ou pas, après avoir regardé. Mais la direction m'a demandé : si l'outil est fiable, est-ce qu'il ne pourrait pas couper le bain tout seul la nuit ? » | La détection actuelle est humaine. La décision d'arrêt est réalisée par le responsable production. Une automatisation future est envisagée mais soulève des questions de confiance et de responsabilité. |
+| Qu'est-ce qui vous ferait considérer l'outil comme suffisamment fiable pour envisager une coupure automatique ? | « Une panne ratée, c'est ce qu'on vit aujourd'hui : 30 000 euros et une équipe en pompier. Donc ce n'est pas pire qu'avant. Mais si on dit aux gars “l'outil surveille” et qu'il rate la panne, ils vont arrêter de surveiller eux-mêmes, et ça, ça m'inquiète. » | Le principal risque perçu est la perte de vigilance humaine. Le client souhaite conserver une supervision humaine même en présence d'un système prédictif. |
+| Depuis quand enregistrez-vous les mesures de température, de pH et de niveau ? | « Chaque bain a des capteurs : température, pH du bain de préparation et niveau de zinc. Ils remontent dans notre supervision toutes les heures. On garde tout depuis deux ans, mais personne ne regarde vraiment, sauf quand il y a une alarme. » | Les données existent, sont historisées sur deux ans et collectées toutes les heures. Le fonctionnement actuel est réactif et non prédictif. |
+| Combien de pannes sont enregistrées dans votre historique et comment sont-elles identifiées aujourd'hui ? | « Oui, la maintenance tient un journal : date et heure de l'arrêt, bain concerné, cause supposée. Sur deux ans, ça fait une cinquantaine de pannes. Les causes, c'est ce que le technicien a écrit, pas toujours très précis. » | Un historique exploitable existe (~50 pannes). La qualité des causes renseignées devra être vérifiée et probablement normalisée. |
+| Pouvez-vous nous transmettre un extrait représentatif des mesures capteurs et du journal de maintenance associé à quelques pannes ? | « Je vous envoie 48 heures de relevés d'un bain, exportées de la supervision. Vous me direz si vous y voyez quelque chose. » | Un extrait réel a été fourni. Il permettra d'évaluer la structure et la qualité des données disponibles. |
+| Qu'est-ce qui vous ferait dire que le projet est réussi dans un an ? | « Si on détecte au moins 70 % des pannes 48 heures avant, c'est déjà énorme. Aujourd'hui, on en détecte zéro. » | KPI métier clairement défini : détecter au moins 70 % des pannes avec un préavis de 48 h. |
+| Les données sont-elles associées à des opérateurs ou à des techniciens identifiables ? | « Des données personnelles ? Non, ce sont des températures et des niveaux. Enfin… le journal de maintenance a le nom du technicien de quart. » | Les mesures industrielles ne sont pas des données personnelles mais le journal de maintenance contient des informations nominatives. |
+| Quelles contraintes d'hébergement, d'accès au réseau industriel ou de cybersécurité devons-nous impérativement respecter ? | « L'atelier n'est pas connecté à internet, et l'automaticien ne veut pas qu'il le soit. Les bureaux, oui. » | Une séparation stricte entre environnement industriel (OT) et environnement bureautique (IT) doit être respectée. |
+| Quelle action réalisez-vous concrètement lorsqu'une dérive est détectée ? | « Il y a des seuils d'alarme dans la supervision : si la température passe 470, ça sonne. Mais quand ça sonne, c'est déjà trop tard. Un stagiaire a fait des graphiques Excel une fois, c'était joli mais ça n'a servi à rien. » | Le site dispose déjà d'alarmes et de visualisations. Le besoin réel n'est pas un nouveau tableau de bord mais une capacité d'anticipation. |
+| Lorsqu'une dérive est détectée suffisamment tôt, quelles actions pouvez-vous mettre en œuvre pour éviter l'arrêt du bain ? | Réponse non obtenue explicitement pendant l'entretien. | Point restant à clarifier : nature des actions préventives réalisables dans la fenêtre de 48 h. À conserver dans les questions ouvertes. |
+| Préféreriez-vous commencer par un pilote sur un seul bain ou déployer directement la solution sur les quatre bains ? | « On a un arrêt technique annuel en février. Si on peut tester quelque chose avant, sur un bain, ce serait bien. » | Le client privilégie une expérimentation progressive sur un bain avant généralisation aux quatre bains. |
 
 _Relance non prévue ? Note-la aussi, avec la raison (« réponse surprenante sur… »)._
 
@@ -61,29 +58,29 @@ _Relance non prévue ? Note-la aussi, avec la raison (« réponse surprenante su
 
 | Information | Statut | Réponse n° |
 |---|---|---|
-| Besoin réel (≠ demande exprimée) | 🟢 | 1, 11 |
+| Besoin réel (≠ demande exprimée) | 🟢 | 1, 10 |
 | Processus actuel | 🟢 | 2 |
-| Données : existence | 🟢 | 5 |
-| Données : volume | 🟢 | 5, 6 |
-| Données : qualité | 🟠 | 6, 7 |
-| Données : extrait obtenu | 🟢 | 7 |
-| Données personnelles / confidentialité | 🟢 | 9 |
-| Critère de succès chiffré | 🟢 | 8 |
-| Coût d'une erreur | 🟢 | 1, 4 |
+| Données : existence | 🟢 | 4 |
+| Données : volume | 🟢 | 4, 5 |
+| Données : qualité | 🟠 | 5, 6 |
+| Données : extrait obtenu | 🟢 | 6 |
+| Données personnelles / confidentialité | 🟢 | 8 |
+| Critère de succès chiffré | 🟢 | 7 |
+| Coût d'une erreur | 🟢 | 1, 3 |
 | Erreurs tolérées (chiffre : fausses alertes, mauvais routage…) | 🔴 | |
 | Utilisateurs | 🟢 | 2 |
 | Validation humaine / qui décide | 🟢 | 2 |
-| SI / hébergement | 🟢 | 10 |
+| SI / hébergement | 🟢 | 9 |
 | Budget | ⬜ | |
 | Délai | 🟠 | 12 |
-| Ce qui a déjà été essayé | 🟢 | 11, relance |
+| Ce qui a déjà été essayé | 🟢 | 10 |
 
 ## 3. Après — ce que je n'ai pas pu demander → questions ouvertes
 
 | Je n'ai pas pu demander / pas eu de réponse claire | Pourquoi c'est important | → §6 du cadrage |
 |---|---|---|
-| Nombre de fausses alertes acceptable par mois | Permet de définir les seuils métier et l'équilibre précision/rappel | KPI et risques |
-| Actions préventives réalisables dans les 48 h | Vérifier que la détection génère réellement une valeur métier | Architecture et processus cible |
-| Budget disponible pour le projet | Conditionne le périmètre et la trajectoire de déploiement | Questions ouvertes |
-| Niveau de qualité réel du journal de maintenance | Peut limiter l'apprentissage supervisé | Données à qualifier |
-| Similarité des comportements entre les 4 bains | Influence la généralisation du pilote | Architecture et feuille de route |
+| Nombre maximum de fausses alertes acceptable par mois | Permet de définir les seuils métier d'acceptabilité | KPI et risques |
+| Actions de maintenance réellement réalisables dans les 48 h | Permet de vérifier que la détection apporte une valeur opérationnelle | Architecture et processus cible |
+| Budget prévu pour le projet | Influence le périmètre et la trajectoire de mise en œuvre | Questions ouvertes |
+| Qualité réelle du journal de maintenance | Conditionne la faisabilité d'un apprentissage supervisé | Données à qualifier |
+| Similarité des comportements entre les 4 bains | Influence la généralisation du pilote aux autres équipements | Architecture et feuille de route |
